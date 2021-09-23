@@ -1,0 +1,25 @@
+name: Make Docs
+on:
+  push:
+    paths:
+      - 'docs/**'
+    tags:
+  release:
+
+jobs:
+  make_docs:
+    runs-on: ubuntu-latest
+    name: Build Docs and Presentations
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+
+    - run: sudo apt update && sudo apt upgrade && sudo apt install texlive-latex-recommended texlive-latex-extra texlive-pictures pandoc rename
+
+    - run: cd docs && make
+
+    - uses: actions/upload-artifact@v2
+      with:
+        name: Docs (.pdf)
+        path: docs/_build/pdf/*.pdf
