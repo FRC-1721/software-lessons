@@ -19,7 +19,7 @@ BUILDDIR      = _build
 
 
 # Do everything
-all: generate_pres clean_filenames sphinx
+all: generate_pres clean_filenames
 
 # Generate artifacts and output binaries
 generate_pres:
