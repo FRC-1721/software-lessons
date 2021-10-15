@@ -6,7 +6,7 @@
 # Team 1721
 
 # Get vars
-hash := $(shell git describe --abbrev=2 --always --tags --dirty)
+hash := $(shell git describe --abbrev=4 --always --tags --dirty)
 builddate := $(shell date +"%m-%d-%y")
 pwd = $(shell pwd)
 builddir = $(pwd)/_build
