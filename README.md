@@ -21,23 +21,28 @@ sudo pacman -S base-devel pandoc
 
 First clone this repo
 
-With ssh:
+## With ssh:
 
 ```sh
 git clone git@github.com:FRC-1721/software-lessons.git
 ```
 
-With https:
+## With https:
 
 ```sh
 git clone https://github.com/FRC-1721/software-lessons.git
 ```
 
+## Build the docs
+
 CD into the docs directory
 
 ```sh
 cd docs
+make
 ```
+
+## Make your own
 
 Copy the example slides
 
