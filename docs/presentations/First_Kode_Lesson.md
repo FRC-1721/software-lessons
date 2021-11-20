@@ -66,7 +66,10 @@ Can you eat it? maybe...
 
 ## Variables
 
-*X is a number*
+```python
+x = 15  # x is an int
+myVar = "Doot!"  # myVar is a string
+```
 
 - Variables:
    - int
@@ -80,9 +83,12 @@ Can you eat it? maybe...
 
 ## Basic Functions
 
-*Computer go ***brrrrrrr***
+*Computer go **brrrrrrr***
 
-Print()
+```python
+print()
+```
+
 Math +\-*%/=><
 
 
@@ -90,15 +96,16 @@ Math +\-*%/=><
 
 ## Example 1
 
-**Take what you've learned and show off!**
-Try to make a program that takes in a **variable** and raises 
+### Take what you've learned and show off!
+
+Try to make a program that takes in a **variable** and raises  
 it to the power of **3**
 
 ## Functions
 
 *Repeat the task again*
 
-If() & else() - Should I do dat?
+If() & else() - Should I do dat?  
 operators ><&|!= - Should I *really* do dat?
 
 def() - Define your own!

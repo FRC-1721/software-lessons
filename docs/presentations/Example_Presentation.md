@@ -12,11 +12,13 @@ description: |
     markdown presentation,
     for use in writing better
     more awesome presentations.
-theme: Szeged
+theme: Dresden
 navigation: frame
 date: "Build Date: &date"
-aspectratio: 1610
+aspectratio: 169
 logo: resources/logo.png
+section-titles: false
+toc: false
 ---
 
 
