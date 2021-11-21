@@ -20,7 +20,7 @@ jobs:
 
     - uses: actions/upload-artifact@v2
       with:
-        name: Docs (.pdf)
+        name: Tidal_Force_Lesson_Pdfs
         path: docs/_build/pdf/*.pdf
 
 
@@ -32,7 +32,7 @@ jobs:
     steps:
     - uses: actions/download-artifact@v2
       with:
-        name: Tidal_Force_Lessons
+        name: Tidal_Force_Lesson_Pdfs
 
     - name: Upload Docs to release
       uses: svenstaro/upload-release-action@v2
