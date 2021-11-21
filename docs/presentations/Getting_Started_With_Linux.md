@@ -49,8 +49,6 @@ a tool for installing software via package **repositories**,
 installing software from a .exe or .msi dosent happen in linux!  
 If you want some software, try this:
 
-### Ubuntu/Debian
-
 ```console
 $ sudo apt install <name of package>
 ```
