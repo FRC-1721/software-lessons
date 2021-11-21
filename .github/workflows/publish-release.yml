@@ -1,0 +1,45 @@
+name: Submit Release
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  make_docs:
+    runs-on: ubuntu-latest
+    name: Build Docs and Presentations
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+
+    - run: sudo apt install texlive-latex-recommended texlive-latex-extra texlive-pictures pandoc rename
+
+    - run: cd docs && make
+
+    - uses: actions/upload-artifact@v2
+      with:
+        name: Docs (.pdf)
+        path: docs/_build/pdf/*.pdf
+
+
+  publish_docs:
+    runs-on: ubuntu-latest
+    name: Publish Teaching Media
+    needs: [make_docs]
+
+    steps:
+    - uses: actions/download-artifact@v2
+      with:
+        name: Tidal_Force_Lessons
+
+    - name: Upload Docs to release
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: '*.pdf'
+        tag: ${{ github.ref }}
+        overwrite: true
+        body: "Tidal Force Robotics, Automated with github ci/cd."
+        file_glob: true
