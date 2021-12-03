@@ -29,6 +29,18 @@ Version Control Software allows software developers
 (Yes, you) to manage and _work together_ when developing
 large, complex codebases.
 
+## Examples of Version Control Software
+
+ - Git
+ - SVN
+ - Subversion
+
+## Why we use Git
+
+Tools like git allow us to document _changes in code_, it
+also enables us to work together, document bugs, changes
+and all aspects of a complex and changing codebase.
+
 
 # Installing git
 
@@ -57,6 +69,11 @@ Unlike tools such as google drive, git does not store code
 as files, instead, a git repo, is simply a collection of
 _git diffs_, 
 
+```shell
+$ git add -A
+$ git commit -m "Change something..."
+```
+
 ## Git diffs
 
 _diffs_ are descriptions of what changes are done on a file, for example:
@@ -72,4 +89,18 @@ index 39cda71..da0d71f 100644
  _git diffs_, 
 +
 +_diffs_ are descriptions of what changes are done on a file, for example:
+```
+
+## Git Blame
+
+Using a tool like _git blame_ we can look back on the history
+of any piece of code in the repo, find out when it was changed,
+and by who.
+
+```
+74631165 (KenwoodFox        2021-12-03 15:58:40 -0500 24) # Introduction to Version Control Software
+fceb20ea (KenwoodFox        2021-12-03 15:42:26 -0500 25) 
+74631165 (KenwoodFox        2021-12-03 15:58:40 -0500 26) ## What is Version Control
+fceb20ea (KenwoodFox        2021-12-03 15:42:26 -0500 27) 
+74631165 (KenwoodFox        2021-12-03 15:58:40 -0500 28) Version Control Software allows software developers
 ```
