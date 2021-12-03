@@ -104,3 +104,29 @@ fceb20ea (KenwoodFox        2021-12-03 15:42:26 -0500 25)
 fceb20ea (KenwoodFox        2021-12-03 15:42:26 -0500 27) 
 74631165 (KenwoodFox        2021-12-03 15:58:40 -0500 28) Version Control Software allows software developers
 ```
+
+# example tutorial
+
+## initalize a new git repo
+
+follow theses steps to make a empty git repo in temp folder
+
+```shell
+/tmp$ cd /tmp
+/tmp$ mkdir git_lesson
+/tmp$ cd git_lesson/
+/tmp/git_lesson$ git init
+Initialized empty Git repository in /tmp/git_lesson/.git/
+```
+
+## commit some changes
+
+``shell
+~$ cd /tmp/git_lesson
+/tmp/git_lesson$ nano README.md
+/tmp/git_lesson$ git add README.md
+/tmp/git_lesson$ git commit -m "make a readme.md"
+[master (root-commit) 0ea961e] make a readme.md
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+```
