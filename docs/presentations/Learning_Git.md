@@ -1,6 +1,6 @@
 ---
 title:
- - Example Presentation
+ - Learning Git
 subtitle:
  - Version &hash
 author:
@@ -8,10 +8,8 @@ author:
 institute:
  - Concord Robotics Team 1721
 description: |
-    An example beamer
-    markdown presentation,
-    for use in writing better
-    more awesome presentations.
+    A tutorial on how to git
+    started with git.
 theme: Dresden
 navigation: frame
 date: "Build Date: &date"
@@ -22,21 +20,38 @@ toc: false
 ---
 
 
-# Page 1
+# Introduction to Version Control Software
 
-This is a page with just a short blurb of text
+## What is Version Control
+
+Version Control Software allows software developers
+(Yes, you) to manage and _work together_ when developing
+large, complex codebases.
 
 
-# Another page
+# Installing git
 
-This page has:
+## Instalation on GNU/Linux
 
- - A list, 
- - Code
+### Ubuntu/Deb
 
- ```sh
- echo "some code, lol?"
- ```
+```shell
+$ sudo apt install git
+```
 
-# The end
-lol
+### Arch Linux
+
+```shell
+# pacman -S git
+```
+
+
+# Using Git
+
+## The git commit
+
+A git commit is the fundamental component in a git repo.
+
+Unlike tools such as google drive, git does not store code
+as files, instead, a git repo, is simply a collection of
+_git diffs_, 
