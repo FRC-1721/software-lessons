@@ -5,6 +5,7 @@ subtitle:
  - Version &hash
 author:
  - Joe
+ - Keegan
 institute:
  - Concord Robotics Team 1721
 description: |
@@ -55,3 +56,20 @@ A git commit is the fundamental component in a git repo.
 Unlike tools such as google drive, git does not store code
 as files, instead, a git repo, is simply a collection of
 _git diffs_, 
+
+## Git diffs
+
+_diffs_ are descriptions of what changes are done on a file, for example:
+
+```diff
+diff --git a/docs/presentations/Learning_Git.md b/docs/presentations/Learning_Git.md
+index 39cda71..da0d71f 100644
+--- a/docs/presentations/Learning_Git.md
++++ b/docs/presentations/Learning_Git.md
+@@ -55,3 +55,5 @@ A git commit is the fundamental component in a git repo.
+ Unlike tools such as google drive, git does not store code
+ as files, instead, a git repo, is simply a collection of
+ _git diffs_, 
++
++_diffs_ are descriptions of what changes are done on a file, for example:
+```
