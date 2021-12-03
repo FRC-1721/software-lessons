@@ -121,8 +121,8 @@ Initialized empty Git repository in /tmp/git_lesson/.git/
 
 ## commit some changes
 
-``shell
-~$ cd /tmp/git_lesson
+```shell
+$ cd /tmp/git_lesson
 /tmp/git_lesson$ nano README.md
 /tmp/git_lesson$ git add README.md
 /tmp/git_lesson$ git commit -m "make a readme.md"
