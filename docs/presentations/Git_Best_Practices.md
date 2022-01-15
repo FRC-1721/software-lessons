@@ -20,21 +20,17 @@ toc: false
 ---
 
 
-# Page 1
+# Naming Conventions
 
-This is a page with just a short blurb of text
+Naming Conventions
 
 
-# Another page
+# Comments in Code
 
-This page has:
-
- - A list, 
- - Code
-
- ```sh
- echo "some code, lol?"
+ ```python
+ print(myCustomThing)
  ```
 
 # The end
+
 lol
