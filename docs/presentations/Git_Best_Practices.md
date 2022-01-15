@@ -31,6 +31,9 @@ Naming Conventions
  print(myCustomThing)
  ```
 
-# The end
+# Auto Formatting
 
-lol
+Configure `black` to be your auto-formatter for python.
+
+If using vscode, you can do this by setting `black`
+under `python.formatting.provider`
