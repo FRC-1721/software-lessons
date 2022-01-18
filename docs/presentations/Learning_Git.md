@@ -18,6 +18,7 @@ aspectratio: 169
 logo: resources/logo.png
 section-titles: false
 toc: false
+fontsize: 8pt
 ---
 
 
@@ -28,6 +29,11 @@ toc: false
 Version Control Software allows software developers
 (Yes, you) to manage and _work together_ when developing
 large, complex codebases.
+
+Working as a team is one of the most difficult parts of
+software development, actually learning the code is difficult
+too but any project is much harder if you are the only one working
+on it.
 
 ## Examples of Version Control Software
 
@@ -42,36 +48,19 @@ also enables us to work together, document bugs, changes
 and all aspects of a complex and changing codebase.
 
 
-# Installing git
-
-## Instalation on GNU/Linux
-
-### Ubuntu/Deb
-
-```shell
-$ sudo apt install git
-```
-
-### Arch Linux
-
-```shell
-# pacman -S git
-```
-
-
 # Using Git
 
 ## The git commit
 
-A git commit is the fundamental component in a git repo.
+A git commit is the fundamental component in a git project.
 
 Unlike tools such as google drive, git does not store code
 as files, instead, a git repo, is simply a collection of
 _git diffs_, 
 
 ```shell
-$ git add -A
-$ git commit -m "Change something..."
+$ git add myfile.txt
+$ git commit -m "Change something in myfile.txt"
 ```
 
 ## Git diffs
@@ -102,8 +91,62 @@ and by who.
 fceb20ea (KenwoodFox        2021-12-03 15:42:26 -0500 25) 
 74631165 (KenwoodFox        2021-12-03 15:58:40 -0500 26) ## What is Version Control
 fceb20ea (KenwoodFox        2021-12-03 15:42:26 -0500 27) 
-74631165 (KenwoodFox        2021-12-03 15:58:40 -0500 28) Version Control Software allows software developers
+74631165 (KenwoodFox        2021-12-03 15:58:40 -0500 28) Version Control Software allows software...
 ```
+
+This is a very useful feature if we want to find a specific change that introduced a new bug, and check
+any and all code that was introduced at that time.
+
+## A quick example
+
+You're working with mechanical team to implement a new feature on the bot, a robot arm, the rest of the code
+team has already left and is working on other things.
+
+Before you get started, you might want to `git checkout main` and `git fetch` to make sure you're
+up to date with the latest code from the repo. If you're behind, you can `git pull` to retreive commits
+upstream`
+
+Now you can `git checkout -b layout-robot-arm`, the -b option lets you create a new branch and its automatically
+based off the branch you're currently on. Its good to base yourself off `main` as this is the latest fully
+tested code.
+
+## A quick example
+
+Now you can start coding! Make small steps, little changes at a time.
+
+```
+Create arm.py with methods for controlling the bot manually
+Integrate arm.py with robot.py
+Create method for controlling the bot with a wii remote
+Refactor arm.py for new arm design
+```
+
+Your commit messages should be short and generally in the afermative tense something like `Create new feature`
+instead of `I created a new feature`. The prior makes reading git logs easier but there are no strict rules,
+if its helpful to you, feel free to write what you think is most relevant.
+
+There are no rules on the commit description (any line past the first is the description) feel free to write notes,
+link issues (ex: #69) or @ other code team members (ex: This might conflict with what @khanMan is working on).
+
+Finally, when you're all done, feel satisfied and `git push`!
+
+
+# Installing git
+
+## Instalation on GNU/Linux
+
+### Ubuntu/Deb
+
+```shell
+$ sudo apt install git
+```
+
+### Arch Linux
+
+```shell
+# pacman -S git
+```
+
 
 # example tutorial
 
