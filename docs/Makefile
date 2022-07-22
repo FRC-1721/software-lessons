@@ -11,6 +11,13 @@ builddate := $(shell date +"%m-%d-%y")
 pwd = $(shell pwd)
 builddir = $(pwd)/_build
 
+# Vars for sphinx
+SPHINXOPTS    ?=
+SPHINXBUILD   ?= sphinx-build
+SOURCEDIR     = .
+BUILDDIR      = _build
+
+
 # Do everything
 all: generate_pres clean_filenames
 
@@ -35,3 +42,6 @@ generate_pres:
 clean_filenames:
 	# Clean presentaiton names 
 	cd $(builddir)/pdf/ && rename 's/.md.pdf$$/.pdf/' *.md.pdf
+
+html:
+	@$(SPHINXBUILD) -M html "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
