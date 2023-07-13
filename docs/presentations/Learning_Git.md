@@ -14,7 +14,7 @@ description: |
 theme: Dresden
 navigation: frame
 date: "Build Date: &date"
-aspectratio: 169
+aspectratio: 1610
 logo: resources/logo.png
 section-titles: false
 toc: false
@@ -56,16 +56,21 @@ A git commit is the fundamental component in a git project.
 
 Unlike tools such as google drive, git does not store code
 as files, instead, a git repo, is simply a collection of
-_git diffs_, 
+_git diffs_,
+
+Lets use this file as an example. lets say we modified this
+very presentation.
 
 ```shell
-$ git add myfile.txt
-$ git commit -m "Change something in myfile.txt"
+...Make some modifications...
+$ git add Learning_Git.md
+$ git commit -m "Change something in Learning_Git.md"
 ```
 
 ## Git diffs
 
-_diffs_ are descriptions of what changes are done on a file, for example:
+Lets look at what the git diff looks like after a change like that, we can use the `git diff`
+command for this.
 
 ```diff
 diff --git a/docs/presentations/Learning_Git.md b/docs/presentations/Learning_Git.md
@@ -77,12 +82,23 @@ index 39cda71..da0d71f 100644
  as files, instead, a git repo, is simply a collection of
  _git diffs_, 
 +
-+_diffs_ are descriptions of what changes are done on a file, for example:
++Lets use this file as an example. lets say we modified this very presentation.
 ```
+
+Git tells us where in the file we modified the data (`@@ -55,3 +55,5 @@`) and whether
+it was an addition `+` or a deletion `-`
+
+
+## Git diffs
+
+### Note {.alertblock}
+You don't need to manually view the diff every time. But its handy to know that git is not tracking actual
+files, but the differences between files. This will be helpful later on when we talk about branching.
+
 
 ## Git Blame
 
-Using a tool like _git blame_ we can look back on the history
+Using a feature of git called blaming, `git blame`` we can look back on the history
 of any piece of code in the repo, find out when it was changed,
 and by who.
 
@@ -96,6 +112,25 @@ fceb20ea (KenwoodFox        2021-12-03 15:42:26 -0500 27)
 
 This is a very useful feature if we want to find a specific change that introduced a new bug, and check
 any and all code that was introduced at that time.
+
+
+## Git branching
+
+One of the most important code collaboration issues arises when we want to edit the same file, or tree
+of files together without stepping on each others toes.
+
+You'll recall back that git only tracks the diffs between files, and not actual files.
+
+Lets say we have a very simple repo with this single file:
+
+```md
+# Hello world!
+
+This is a markdown file.
+
+Please add some text here!
+```
+
 
 ## A quick example
 
